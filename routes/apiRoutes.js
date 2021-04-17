@@ -27,7 +27,14 @@ router.post("/api/workouts", (req, res) => {
   });
   
   router.get("/api/workouts", (req, res) => {
-    Workout.find()
+    Workout.aggregate([
+        { $addFields: {
+            totalDuration: {
+                $sum:"$exercises.duration"
+            }
+        }}  
+  
+      ])
       .then(dbWorkouts => {
         res.json(dbWorkouts);
       })
@@ -48,6 +55,7 @@ router.post("/api/workouts", (req, res) => {
     .sort({day:-1})
     .limit(7)
       .then(dbWorkouts => {
+          console.log(dbWorkouts)
         res.json(dbWorkouts);
       })
       .catch(err => {
