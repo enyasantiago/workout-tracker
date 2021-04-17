@@ -3,7 +3,8 @@
 ## User Story
 
 This app allows the user to view create and track daily workouts. The user is able to log multiple exercises in a workout on a given day. The user is also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, the user is able to track the distance traveled.
-![image](https://user-images.githubusercontent.com/15931465/115124404-161c6a00-9f90-11eb-8bcd-9a01b770b81f.png)
+
+![Fitness Tracker](https://user-images.githubusercontent.com/15931465/115124559-db670180-9f90-11eb-97f4-246b6ea1580a.gif)
 
 ## Deployed app
 
